@@ -45,7 +45,7 @@ const Navbar = () => {
         <Link to={"/"}>
           <div className=" gap-x-2 flex items-center">
             <img
-              className=" w-[120px] object-contain h-24"
+              className=" w-[80px] md:w-[120px] object-contain h-20 md:h-24"
               src={LogoImg}
               alt="logo"
             />
@@ -56,7 +56,7 @@ const Navbar = () => {
                   : currentLocation !== "/"
                   ? "text-slate-950"
                   : " text-white"
-              } text-2xl lg:text-[28px] 2xl:text-[31px] font-bold`}
+              } text-[20px] md:text-2xl lg:text-[28px] 2xl:text-[31px] font-bold`}
             >
               Catholic Archdiocese of Owerri
             </h1>
@@ -101,9 +101,9 @@ const Navbar = () => {
         <div className="flex lg:hidden">
           <button
             onClick={() => setOpen(true)}
-            className=" transition-all rounded-md p-2 border border-gray-600"
+            className={` ${ currentLocation === "/" && navBgChange === false ? 'border-white':  ' border-primary'}transition-all rounded-md p-2 border`}
           >
-            <Bars3BottomRightIcon className=" h-8 w-8 fill-gray-600" />
+            <Bars3BottomRightIcon className={`${currentLocation === "/" && navBgChange === false ? 'fill-white':'fill-primary'}  transition-all duration-500 ease-in-out8 w-8 `} />
           </button>
         </div>
         <div className=" hidden items-center gap-x-2 lg:flex md:justify-end">
@@ -171,7 +171,7 @@ const Navbar = () => {
                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                       <div className="px-4 sm:px-6">
                         <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                          Panel title
+                         
                         </Dialog.Title>
                       </div>
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
@@ -187,6 +187,7 @@ const Navbar = () => {
                           >
                             {mainNavigation.map((item, idx) => (
                               <li
+                              onClick={()=> setOpen(false)}
                                 className={` ${
                                   item.url === currentLocation ? " text-primary border-b-2 border-b-primary"
                                     : 

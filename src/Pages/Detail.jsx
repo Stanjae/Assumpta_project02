@@ -39,7 +39,7 @@ const {pathname} = useLocation()
 
       <div className=' bg-[#F3F3F3] py-10' >
         <div className=' max-w-6xl mx-auto  grid gap-6 grid-cols-12 '>
-            <div className=' bg-white shadow-sm rounded-md py-3 px-5 col-span-3'>
+            <div className=' bg-white shadow-sm rounded-md py-3 px-5 col-span-12 md:col-span-3'>
                 <div>
                   <img className=' z-50 block mx-auto rounded-full object-cover w-48 h-48' src={priestImage?.at(0)} alt='detail image'/>
                 </div>
@@ -63,7 +63,7 @@ const {pathname} = useLocation()
             </div>
 
 
-            <div className=' space-y-5 bg-transparent col-span-9'>
+            <div className=' space-y-5 bg-transparent col-span-12 md:col-span-9'>
               <div className=' rounded-md bg-white'>
                   <div className=' px-6 border-b border-b-gray-200 py-2'>
                     <h2 className='text-2xl'>Profile Description</h2>
