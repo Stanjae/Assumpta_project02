@@ -92,7 +92,7 @@ const Directory = () => {
         <ul className="mt-12 divide-y">
             {
                 filteredData?.map((item, idx) => (
-                    <li key={idx} className="py-5 flex flex-col md:flex-row flex-wrap items-center px-4 md:justify-between">
+                    <li key={idx} className="py-5 flex flex-col md:flex-row flex-wrap gap-y-4 md:gap-y-0 items-center px-4 md:justify-between">
                         <div className="flex gap-3">
                             <img src={allPriestsImages[item.priestID]} className="flex-none w-12 h-12 rounded-full" />
                             <div>
@@ -100,7 +100,7 @@ const Directory = () => {
                                 <span className="block text-sm text-gray-600">{item.email}</span>
                             </div>
                         </div>
-                        <div className=' space-x-3'>
+                        <div className=' flex justify-end py-2 md:py-0 space-x-3'>
                           {pathname.startsWith('/directory') ? <Link to={`/directory/detail/${item.priestID}`} 
                           className="text-slate-100 text-sm border rounded-lg px-3 py-2 duration-150 bg-slate-800  hover:bg-slate-800/75">
                             View</Link>

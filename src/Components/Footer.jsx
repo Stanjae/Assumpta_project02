@@ -74,8 +74,8 @@ export const Footer = () => {
                 <div className="flex-1">
                     <div className="max-w-xs">
                         <img src={LogoImg} className="w-32" />
-                        <p className="leading-relaxed mt-2 text-[15px]">
-                            Lorem Ipsum has been the industry @apos; s standard dummy text ever since the 1500s.
+                        <p className="leading-relaxed mt-2 text-slate-50 text-[15px]">
+                           A Directory of priests under the Catholic Archdioceses of Owerri
                         </p>
                     </div>
                     <form 
@@ -127,8 +127,8 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
-                <div className="mt-4 sm:mt-0">
-                    &copy; 2022 Float UI All rights reserved.
+                <div className="mt-4 text-slate-50 sm:mt-0">
+                    &copy; 2024 <a className=' decoration-primary decoration-solid underline' href='https://stanjhae.vercel.app/'>Stanity</a> &copy; All rights reserved.
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
