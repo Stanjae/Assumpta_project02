@@ -51,6 +51,7 @@ const Updater = ({type, setAlertInfo}) => {
             await AddImages(imageData)
             setAlertInfo({isAlert:true, message:'Data Updated Sucessfully', color:'green'})
             setIsSubmitting(false)
+            setTimeout(()=> window.location.assign('/dashboard'), 1500)
         }catch(err){
             console.log(err)
             setAlertInfo({isAlert:true, message:'An Error Occured', color:'red'});
